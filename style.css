@@ -1,0 +1,28 @@
+* {
+  text-align: center;
+  
+}
+
+#lista-tarefas-div {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+  font-size: 20px;
+}
+
+li {
+  display: flex;
+  justify-content: center;
+  vertical-align: top;
+  text-align: center;
+  align-items: flex-start;
+}
+
+.completed {
+  text-decoration: line-through;
+}
