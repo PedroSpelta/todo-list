@@ -1,12 +1,47 @@
 * {
   text-align: center;
-  
+  margin: 0;
+  font: Arial;
+  padding: 0;
+}
+
+
+body {
+  margin-top: -10px;
+}
+
+.botao {
+  width: 50px;
+  font-size: 19px;
+  border-radius: 8px;
+  border: 1.5px solid black;
+}
+
+h1 {
+  margin: 10px;
+}
+#funcionamento {
+  margin-bottom: 50px;padding: 20px;
+}
+
+#header {
+  background-color: black;
+  color: white;
+  padding: 0px;
+  margin: 0px 300px;
+}
+
+#lista-tarefas {
+  margin-top: 20px;
+  margin-bottom: 0px;
 }
 
 #lista-tarefas-div {
+  overflow-y: auto;
   display: flex;
   justify-content: center;
   text-align: center;
+  height: 200px;
 }
 
 ul {
@@ -15,14 +50,79 @@ ul {
   font-size: 20px;
 }
 
+#quadro-principal {
+  border-radius: 8px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  border: 1.5px solid black;
+  width: 300px;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
 li {
+  background-color: white;
   display: flex;
   justify-content: center;
   vertical-align: top;
-  text-align: center;
+  text-align: left;
   align-items: flex-start;
+  border: 1px solid gray;
+  width: 185px;
+  user-select: none;
+}
+
+#texto-tarefa {
+  width: 135px;
+  height: 50px;
+  margin: auto;
 }
 
 .completed {
   text-decoration: line-through;
+}
+
+#abaixo-lista {
+  background-color: gray;
+
+  height: 35px;
+  width: 187px;
+  margin: auto;
+}
+
+body {
+  background-image: url('disquete.jpg');
+}
+
+.twa-file-folder {
+  background-image: url("https://twemoji.maxcdn.com/2/svg/1f4c1.svg"); 
+}
+
+.twa-heavy-plus-sign {
+  background-image: url("https://twemoji.maxcdn.com/2/svg/2795.svg"); 
+}
+
+.twa-cross-mark {
+  background-image: url("https://twemoji.maxcdn.com/2/svg/274c.svg"); }
+
+.twa {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  margin: 0 .05em 0 .1em;
+  vertical-align: -0.1em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1em 1em; 
+}
+
+#apaga-tudo, #remover-selecionados, #remover-finalizados {
+  width: 100px;
+  height: 50px;
+}
+
+.linha {
+  margin-bottom: 10px;
 }

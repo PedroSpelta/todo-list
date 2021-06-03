@@ -8,23 +8,37 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <div id="header">
     <h1>
-      Minha Lista de Tarefas
+      Lista de Tarefas
     </h1>
-    <p id="funcionamento">Clique duas vezes em um item para marcá-lo como completo</p>
-  </header>
-  <input type="text" id="texto-tarefa">
-  <div id="lista-tarefas-div">
-    <ul id="lista-tarefas"></ul>
+    <p id="funcionamento">
+      Clique duas vezes em um item para marcá-lo como completo<br>
+      Clique uma vez para selecionar uma tarefa
+    </p>
   </div>
-  <button id="criar-tarefa" >Criar tarefa</button>
-  <button id="apaga-tudo" >Apagar todas</button>
-  <button id="remover-finalizados" >Apagas finalizadas</button>
-  <button id="salvar-tarefas" >Salvar tarefas</button>
-  <button id="mover-cima" >Cima</button>
-  <button id="mover-baixo" >Baixo</button>
-  <button id="remover-selecionado" >Remover Selecionado</button>
+  <div id="quadro-principal">
+    <input type="text" id="texto-tarefa">
+    <div id="lista-tarefas-div">
+      <ul id="lista-tarefas"></ul>
+    </div>
+    <div id="abaixo-lista"></div>
+  </div>
+  <div class="linha">
+    <button class="botao" id="criar-tarefa" >
+      <p class="twa twa-heavy-plus-sign"></p>
+    </button>
+    <button class="botao" id="remover-selecionado" >Del</button>
+    <button class="botao" id="mover-cima" >⬆</button>
+    <button class="botao" id="mover-baixo" >⬇</button>
+    <button class="botao" id="salvar-tarefas" >
+      <p class="twa twa-file-folder"></p>
+    </button>
+  </div>
+  <div class="linha">
+    <button class="botao" id="apaga-tudo" >Deletar tudo</button>
+    <button class="botao" id="remover-finalizados" >Deletar finalizados</button>
+  </div>
 </body>
 <script src="script.js"></script>
 </html>

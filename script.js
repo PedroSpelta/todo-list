@@ -76,6 +76,7 @@ function saveAllTasks() {
     if (index < list.length - 1) stringList += '/final/';
   }
   window.localStorage.setItem('lista', stringList);
+  window.alert('Tarefas gravadas!')
 }
 
 function checkClassLoad(tasks, index) {
