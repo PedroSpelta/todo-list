@@ -37,11 +37,10 @@ h1 {
 }
 
 #lista-tarefas-div {
-  overflow-y: auto;
   display: flex;
   justify-content: center;
   text-align: center;
-  height: 200px;
+  height: auto;
 }
 
 ul {
@@ -86,7 +85,7 @@ li {
 
 #abaixo-lista {
   background-color: gray;
-
+  border: 2px solid black;
   height: 35px;
   width: 187px;
   margin: auto;
