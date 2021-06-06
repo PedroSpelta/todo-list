@@ -67,17 +67,22 @@ function removeLinedTasks() {
   }
 }
 
+
 function saveAllTasks() {
-  let stringList = '';
   const list = document.querySelector(listTask).children;
-  for (let index = 0; index < list.length; index += 1) {
-    stringList += `${list[index].innerText}`;
-    if (isCompletedTask(list[index])) stringList += '.completed';
-    if (index < list.length - 1) stringList += '/final/';
+  let array = [];
+  for (let element of list) {
+    let obj = {};
+    const tag = element.tagName.toLowerCase();
+    const className = element.className;
+    obj['id'] = element.tagName.toLowerCase();
+    obj['innerText'] =  element.innerText;
+    obj['className'] = element.className;
+    array.push(obj);
   }
-  window.localStorage.setItem('lista', stringList);
-  window.alert('Tarefas gravadas!')
+  window.localStorage.setItem('lista', JSON.stringify(array));
 }
+
 
 function checkClassLoad(tasks, index) {
   if (tasks[index].split('.')[1] === 'completed') {
@@ -87,13 +92,14 @@ function checkClassLoad(tasks, index) {
 }
 
 function loadAllTasks() {
-  const local = window.localStorage.getItem('lista');
+  const local = JSON.parse(window.localStorage.getItem('lista'));
   if (local !== null) {
-    const tasks = local.split('/final/');
-    // const tasks = window.localStorage.getItem('lista').split(' ');
-    for (let index = 0; index < tasks.length; index += 1) {
-      checkClassLoad(tasks, index);
-    }
+    local.forEach((element) => {
+      task = createTask(element['innerText']);
+      if (element['className'] !== "") {
+        task.classList.add(element.className);
+      }
+    });
   }
 }
 
